@@ -6,7 +6,7 @@ def pravac(xa, ya, xb, yb):
     l=ya - xa * k
     print("y = {}x + {}".format(k, l))
 
-    xs=np.linspace(-5, 5, 20)
+    xs=np.linspace(-4, 4, 50)
     ys= k * xs + l
 
     plt.title("Pravac")
@@ -14,8 +14,8 @@ def pravac(xa, ya, xb, yb):
     plt.ylabel("Y")
 
     plt.plot(xs,ys)
-    plt.plot(xa,ya, marker="o")
-    plt.plot(xb,yb, marker="o")
+    plt.scatter(xa,ya)
+    plt.scatter(xb,yb)
     
     opt = input("Spremi graf (S) ili Prikaži graf (P): ")
     if opt=="P":
